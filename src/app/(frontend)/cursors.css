@@ -1,0 +1,54 @@
+/* Custom Cursors - generated from .cur files */
+/* Place PNG files in /public/cursors/ */
+
+*, html, body {
+  cursor: url('/cursors/Normal_Select.png') 5 2, default;
+}
+
+a, button, [role="button"], label[for], select, [onclick] {
+  cursor: url('/cursors/Link_Select.png') 5 2, pointer;
+}
+
+[title], abbr, [data-tooltip] {
+  cursor: url('/cursors/Help_Select.png') 5 2, help;
+}
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, p, [contenteditable] {
+  cursor: url('/cursors/Text_Select.png') 15 15, text;
+}
+
+[draggable="true"], .draggable {
+  cursor: url('/cursors/Move.png') 15 15, move;
+}
+
+.resize-h, [data-resize="h"] {
+  cursor: url('/cursors/Horizontal_Resize.png') 15 15, ew-resize;
+}
+
+.resize-v, [data-resize="v"] {
+  cursor: url('/cursors/Vertical_Resize.png') 15 15, ns-resize;
+}
+
+.resize-nwse {
+  cursor: url('/cursors/Diagonal_Resize_1.png') 15 15, nwse-resize;
+}
+
+.resize-nesw {
+  cursor: url('/cursors/Diagonal_Resize_2.png') 15 15, nesw-resize;
+}
+
+:disabled, [disabled], [aria-disabled="true"], .disabled {
+  cursor: url('/cursors/Unavailable.png') 15 15, not-allowed;
+}
+
+.handwriting {
+  cursor: url('/cursors/Handwriting.png') 1 1, cell;
+}
+
+.precision, canvas {
+  cursor: url('/cursors/PrecisionSelect.png') 15 15, crosshair;
+}
+
+.alternate {
+  cursor: url('/cursors/Alternate_Select.png') 15 1, alias;
+}

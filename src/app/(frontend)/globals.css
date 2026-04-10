@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --main: #61274b;
+  --hover-main: #8d1742;
+  --active-main: #3d1635;
+  --light-main: #dd86b9;
+  --dark-main: #2b152a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-main: var(--main);
+  --color-hover-main: var(--hover-main);
+  --color-active-main: var(--active-main);
+  --color-light-main: var(--light-main);
+  --color-dark-main: var(--dark-main);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --animate-marquee: marquee-loop 8s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c0825;
+    --foreground: #000000;
+  }
+}
+
+@keyframes marquee-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+* {
+  cursor:
+    url('data:image/png;base64,...') 5 2,
+    default;
+}
+
+/* Scrollbar principale */
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+  background: transparent;
+}
+
+/* Supprimer les boutons */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Coin entre scrollbars verticale et horizontale */
+::-webkit-scrollbar-corner {
+  background: var(--dark-main);
+  border: 3px solid var(--active-main);
+  box-sizing: border-box;
+}
+
+/* Thumb (curseur) */
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+  border: 3px solid var(--dark-main);
+  border-radius: 0; /* carré pour style pixel art */
+  min-height: 40px;
+  box-shadow:
+    inset 3px 3px 0px var(--light-main),
+    inset -3px -3px 0px var(--dark-main);
+  box-sizing: border-box; /* essentiel pour garder le style */
+}
+
+/* Track (fond) */
+::-webkit-scrollbar-track {
+  background: var(--active-main); /* changé de --dark-main à --active-main */
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+/* Regular / Normal */
+@font-face {
+  font-family: 'aria';
+  src:
+    url('/fonts/pixel-aria.woff2') format('woff2'),
+    url('/fonts/pixel-aria.woff') format('woff');
+  font-weight: 400; /* normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'aria-bold';
+  src:
+    url('/fonts/pixel-aria-bold.woff2') format('woff2'),
+    url('/fonts/pixel-aria-bold.woff') format('woff');
+  font-weight: 700; /* bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: url(/image/bg.png);
+  background-repeat: repeat;
+  color: var(--foreground);
+  font-family: aria, Helvetica, sans-serif; /* police normale */
+  font-weight: 400; /* normal */
+}
+
+/* Pour le gras */
+strong,
+b {
+  font-weight: 700; /* bold */
+}
